@@ -233,5 +233,5 @@ The SIEM lab was successfully configured with centralized log collection, securi
 - Detected failed login attempts
 - Implemented a functional SIEM home lab using Splunk
   
-[view full report](screenshots/Splunk_Siem_Lab Project_Report.pdf)
+![view full report](Splunk_Siem_Lab_Project_Report.pdf)
 
