@@ -1,6 +1,8 @@
 #  Splunk SIEM Home Lab: Windows Log Monitoring & Threat Detection
 
-![](screenshots/splunk_banner.png)
+
+![](screenshots/splunk_banner.jpg)
+
 
 A hands-on SIEM home lab built using **Splunk Enterprise** and **Splunk Universal Forwarder** for centralized log collection, monitoring, and basic threat detection.
 
@@ -19,7 +21,6 @@ The project includes:
 - Failed login detection
 - Basic attack simulation
 
----
 
 #  Tools Used
 
@@ -30,7 +31,6 @@ The project includes:
 - Kali Linux
 - SPL (Search Processing Language)
 
----
 
 #  Skills Learned
 
@@ -81,9 +81,9 @@ Splunk Enterprise was installed on a Linux environment to act as the central SIE
 - Accessed Splunk Web Interface on port 8000
   
   ![](screenshots/login_page.png)
+  
 
 
----
 
 ## 2. Configuring Receiving Port
 
@@ -102,8 +102,6 @@ To allow external systems to send logs, receiving was enabled in Splunk on port 
   
   ![](screenshots/receiving_port_enabled.png)
 
-
----
 
 
 ## 3. Windows Virtual Machine Setup
@@ -126,7 +124,6 @@ A Windows virtual machine was created using Oracle VirtualBox to simulate a clie
   ![](screenshots/vm_network.png)
 
 
----
 
 ## 4. Splunk Universal Forwarder Installation
 
@@ -143,7 +140,6 @@ Splunk Universal Forwarder was installed on the Windows machine to forward logs 
 - Enabled Windows log forwarding
 
 
----
 
 ## 5. Windows Log Collection Configuration
 
@@ -160,7 +156,6 @@ Windows Event Logs were configured for monitoring and forwarding.
 - Restarted Splunk Forwarder service
 
 
----
 
 ## 6 Verifying Log Ingestion in Splunk
 
@@ -182,7 +177,6 @@ index=*
 
   ![](screenshots/seurity_logs.png)
   
----
 
 ## 7. Failed Login Attack Simulation
 
@@ -196,7 +190,6 @@ A failed login scenario was simulated to generate security events for analysis.
   ![](screenshots/failed_login_event.png)
 
 
----
 
 ## 8. Threat Detection using SPL Queries
 
@@ -215,7 +208,6 @@ index=* sourcetype=WinEventLog:Security EventCode=4625
 
 ![](screenshots/4625.png)
 
----
 
 ## 9. Security Event Analysis
 
@@ -231,7 +223,6 @@ Collected logs were analyzed to understand login behavior and suspicious activit
 
 ![](screenshots/4625_details.png)
 
----
 
 ## 10. Project Completion
 
