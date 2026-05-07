@@ -1,5 +1,7 @@
 #  Splunk SIEM Home Lab: Windows Log Monitoring & Threat Detection
 
+![](screenshots/splunk_banner.png)
+
 A hands-on SIEM home lab built using **Splunk Enterprise** and **Splunk Universal Forwarder** for centralized log collection, monitoring, and basic threat detection.
 
 This project demonstrates how Windows Event Logs can be collected, forwarded, and analyzed using Splunk SPL queries to identify suspicious activities such as failed login attempts.
@@ -18,6 +20,7 @@ The project includes:
 - Basic attack simulation
 
 ---
+
 #  Tools Used
 
 - Splunk Enterprise
@@ -64,6 +67,7 @@ Below are key steps taken in the process
 Splunk Enterprise was installed on a Linux environment to act as the central SIEM server for log collection and analysis.
 
 ### Tasks Performed
+
 - Downloaded Splunk Enterprise
   
   ![](screenshots/splunk_download.png)
@@ -107,13 +111,20 @@ To allow external systems to send logs, receiving was enabled in Splunk on port 
 A Windows virtual machine was created using Oracle VirtualBox to simulate a client system generating logs.
 
 ### Tasks Performed
+
 - Created Windows VM
+  
+  ![](screenshots/windows_vm.png)
 - Configured RAM and processor settings
+  
+  ![](screenshots/vm_processor.png)
 - Installed Windows operating system
+  
+  ![](screenshots/windows_vm1.png)
 - Verified network connectivity between Linux and Windows
 
-### 📸 Screenshot
-_Add screenshot of Windows VM running_
+  ![](screenshots/vm_network.png)
+
 
 ---
 
@@ -123,12 +134,14 @@ Splunk Universal Forwarder was installed on the Windows machine to forward logs 
 
 ### Tasks Performed
 - Downloaded Splunk Universal Forwarder
+  
+  ![](screenshots/splunk_forwader_download.png)
 - Installed the forwarder on Windows
 - Configured receiving indexer IP and port
+  
+  ![](screenshots/splunk_forwarder_config.png)
 - Enabled Windows log forwarding
 
-### 📸 Screenshot
-_Add screenshot of Universal Forwarder setup_
 
 ---
 
@@ -142,10 +155,10 @@ Windows Event Logs were configured for monitoring and forwarding.
   - Application Logs
   - System Logs
 - Configured `inputs.conf`
+  
+  ![](screenshots/security_logs_config.png)
 - Restarted Splunk Forwarder service
 
-### 📸 Screenshot
-_Add screenshot of inputs.conf configuration or logs being forwarded_
 
 ---
 
@@ -155,14 +168,20 @@ After configuration, logs from the Windows system were verified in Splunk using 
 
 ### Tasks Performed
 - Opened Search & Reporting
+  
+  ![](screenshots/datasummary1.png)
+
+  ![](screenshots/datasummary.png)
 - Searched incoming logs using:
 ```spl
 index=*
 ```
 - Verified Windows logs successfully appeared
-  📸 Screenshot
-Add screenshot of logs appearing in Splunk
+  
+  ![](screenshots/logs_dashboard.png)
 
+  ![](screenshots/seurity_logs.png)
+  
 ---
 
 ## 7. Failed Login Attack Simulation
@@ -173,9 +192,9 @@ A failed login scenario was simulated to generate security events for analysis.
 - Locked the Windows system
 - Entered incorrect passwords multiple times
 - Generated Windows Security EventCode 4625
+  
+  ![](screenshots/failed_login_event.png)
 
-### 📸 Screenshot
-_Add screenshot of generated failed login logs_
 
 ---
 
@@ -194,8 +213,7 @@ index=* sourcetype=WinEventLog:Security EventCode=4625
 - Analyzed security event details
 - Observed audit failure logs
 
-### 📸 Screenshot
-_Add screenshot of EventCode 4625 detection results_
+![](screenshots/4625.png)
 
 ---
 
@@ -211,12 +229,11 @@ Collected logs were analyzed to understand login behavior and suspicious activit
 - TaskCategory
 - SourceName
 
-### 📸 Screenshot
-_Add screenshot showing detailed event fields_
+![](screenshots/4625_details.png)
 
 ---
 
-## 🔟 Project Completion
+## 10. Project Completion
 
 The SIEM lab was successfully configured with centralized log collection, security event monitoring, and threat detection capabilities.
 
@@ -225,5 +242,4 @@ The SIEM lab was successfully configured with centralized log collection, securi
 - Detected failed login attempts
 - Implemented a functional SIEM home lab using Splunk
 
-### 📸 Screenshot
-_Add final dashboard or complete setup screenshot_
+
