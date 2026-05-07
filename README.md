@@ -87,15 +87,20 @@ To allow external systems to send logs, receiving was enabled in Splunk on port 
 
 ### Tasks Performed
 - Opened Splunk Web
+  
+  ![](screenshots/dashboard-home.png)
 - Navigated to:
   `Settings → Forwarding and Receiving`
-- Enabled receiving
+- Enable receiving
+  
+  ![](screenshots/receiving_port.png)
 - Configured port 9997
+  
+  ![](screenshots/receiving_port_enabled.png)
 
-### 📸 Screenshot
-_Add screenshot of receiving port configuration_
 
 ---
+
 
 ## 3. Windows Virtual Machine Setup
 
