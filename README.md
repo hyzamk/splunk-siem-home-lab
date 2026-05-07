@@ -47,7 +47,7 @@ The project includes:
 ```text
       Windows Machine
              ↓
-   Splunk Universal Forwarder
+ Splunk Universal Forwarder
              ↓
          Port 9997
              ↓
