@@ -65,13 +65,18 @@ Splunk Enterprise was installed on a Linux environment to act as the central SIE
 
 ### Tasks Performed
 - Downloaded Splunk Enterprise
+  
+  ![](screenshots/splunk_download.png)
 - Installed Splunk on Linux
+  
+  ![](screenshots/install_splunk.png)
 - Started Splunk service
 - Configured administrator credentials
+  
+  ![](screenshots/starting_splunk.png)
 - Accessed Splunk Web Interface on port 8000
-
-### 📸 Screenshot
-### 🔹 Splunk Dashboard
+  
+  ![](screenshots/login_page.png)
 
 
 ---
